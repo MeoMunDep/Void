@@ -49,7 +49,7 @@ Before running the bot, make sure you have installed:
    ```
 2. **Install required libraries**:
    ```bash
-   npm install --force user-agents axios colors https-proxy-agent socks-proxy-agent ws 
+   npm install --force user-agents axios meo-forkcy-proxy meo-forkcy-colors meo-forkcy-utils ws 
    ```
 3. **Prepare configuration files** ([See details](#bot-configuration))
 
@@ -76,7 +76,6 @@ Before running the bot, make sure you have installed:
 
 ```json
 {
-  "timeZone": "en-US",
   "rotateProxy": false,
   "skipInvalidProxy": true,
   "proxyRotationInterval": 2,
@@ -92,7 +91,6 @@ Explanation of each parameter:
 
 | **Parameter Name**            | **Data Type**      | **Default Value** | **Description**                                                                   |
 | ----------------------------- | ------------------ | ----------------- | --------------------------------------------------------------------------------- |
-| `timeZone`                    | `string`           | `"en-US"`         | Default time zone for the bot (e.g., `"vi-VN"` for Vietnam).                      |
 | `rotateProxy`                 | `boolean`          | `false`           | Enable/disable automatic proxy rotation between accounts.                         |
 | `skipInvalidProxy`            | `boolean`          | `false`           | If `true`, the bot will skip that account due to invalid proxy.                   |
 | `proxyRotationInterval`       | `number`           | `2`               | Time interval (in minutes) between proxy rotations when `rotateProxy` is enabled. |

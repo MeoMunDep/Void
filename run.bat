@@ -8,8 +8,7 @@ echo Checking configuration files...
 
 if not exist configs.json (
     echo {> configs.json
-    echo   "timeZone": "en-US",>> configs.json
-    echo   "rotateProxy": false,>> configs.json
+=    echo   "rotateProxy": false,>> configs.json
     echo   "skipInvalidProxy": false,>> configs.json
     echo   "proxyRotationInterval": 2,>> configs.json
     echo   "delayEachAccount": [5, 8],>> configs.json
@@ -35,11 +34,11 @@ echo Checking dependencies...
 if exist "..\node_modules" (
     echo Using node_modules from parent directory...
     cd ..
-    CALL npm install user-agents axios colors https-proxy-agent socks-proxy-agent ws 
+    CALL npm install user-agents axios meo-forkcy-proxy meo-forkcy-colors meo-forkcy-utils ws 
     cd %~dp0
 ) else (
     echo Installing dependencies in current directory...
-    CALL npm install user-agents axios colors https-proxy-agent socks-proxy-agent ws 
+    CALL npm install user-agents axios meo-forkcy-proxy meo-forkcy-colors meo-forkcy-utils ws 
 )
 echo Dependencies installation completed!
 
