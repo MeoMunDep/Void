@@ -3,7 +3,7 @@ version: '3.8'
 services:
   bot:
     build: .
-    container_name: my_bot
+    container_name: void
     restart: unless-stopped
     volumes:
       - ./configs.json:/app/configs.json
